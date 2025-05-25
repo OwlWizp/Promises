@@ -1,13 +1,5 @@
-export default function getSpecialAttack(character) {
-  const { special } = character;
-  const result = [];
-  special.forEach((attack) => {
-    const {
-      id, name, icon, description = 'Описание недоступно',
-    } = attack;
-    result.push({
-      id, name, icon, description,
-    });
-  });
-  return result;
-}
+import GameSavingLoader from './GameSavingLoader.js';
+
+export default GameSavingLoader.load().then((saving) => {return saving}, (error) => {
+  // ...
+});

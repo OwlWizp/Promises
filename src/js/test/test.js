@@ -1,19 +1,15 @@
-import getSpecialAttack from '../app.js';
-import { character as bowman } from '../Bowman.js';
+import saving from '../app.js';
 
-test('test description function', () => {
-  expect(getSpecialAttack(bowman)).toEqual([
-    {
-      id: 8,
-      name: 'Двойной выстрел',
-      icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон',
+jest.setTimeout(10000);
+
+test('test app save', async (done) => {
+  const data = await saving;
+  expect(data).toEqual({
+    id: 9,
+    created: 1546300800,
+    userInfo: {
+      id: 1, name: 'Hitman', level: 10, points: 2000,
     },
-    {
-      id: 9,
-      name: 'Нокаутирующий удар',
-      icon: 'http://...',
-      description: 'Описание недоступно',
-    },
-  ]);
+  });
+  done();
 });
