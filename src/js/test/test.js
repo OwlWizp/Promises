@@ -2,7 +2,7 @@ import saving from '../app.js';
 
 jest.setTimeout(10000);
 
-test('test app save', async (done) => {
+test('test app save', async () => {
   const data = await saving;
   expect(data).toEqual({
     id: 9,
@@ -11,5 +11,5 @@ test('test app save', async (done) => {
       id: 1, name: 'Hitman', level: 10, points: 2000,
     },
   });
-  done();
+  
 });
