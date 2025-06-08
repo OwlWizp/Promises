@@ -1,5 +1,4 @@
 import saving from '../app.js';
-import GameSavingLoader from '../GameSavingLoader';
 
 jest.setTimeout(10000);
 

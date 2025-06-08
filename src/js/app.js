@@ -1,3 +1,3 @@
 import GameSavingLoader from './GameSavingLoader.js';
 
-export default GameSavingLoader.load().then((saving) => {return saving});
+export default GameSavingLoader.load();
